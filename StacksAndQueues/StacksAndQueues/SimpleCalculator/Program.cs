@@ -5,8 +5,7 @@
 		static void Main()
 		{
 			//must use stack
-			Stack<string> expression = new Stack<string>(Console.ReadLine().Split().Reverse());
-
+			Stack<string> expression = new Stack<string>(Console.ReadLine().Split().Reverse()); 
 			int sum = int.Parse(expression.Pop());
 
 			while (expression.Count > 0)
