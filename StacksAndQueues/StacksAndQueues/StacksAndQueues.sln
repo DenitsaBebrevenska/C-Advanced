@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseAString", "ReverseAString\ReverseAString.csproj", "{E09473FB-813D-4955-8A15-2C22B8A0FDB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseAString", "ReverseAString\ReverseAString.csproj", "{E09473FB-813D-4955-8A15-2C22B8A0FDB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackSum", "StackSum\StackSum.csproj", "{B7051787-D172-49CB-8FBF-29D5FAEFED11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackSum", "StackSum\StackSum.csproj", "{B7051787-D172-49CB-8FBF-29D5FAEFED11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{BBBB4E9A-3EA8-4EDA-B423-85C562307A7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{BBBB4E9A-3EA8-4EDA-B423-85C562307A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingBrackets", "MatchingBrackets\MatchingBrackets.csproj", "{7759739D-E722-4893-BF17-5948DE3FEF34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatchingBrackets", "MatchingBrackets\MatchingBrackets.csproj", "{7759739D-E722-4893-BF17-5948DE3FEF34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintEvenNumbers", "PrintEvenNumbers\PrintEvenNumbers.csproj", "{54A5EB14-EE07-4CC5-A2E2-47F4DFC191E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7759739D-E722-4893-BF17-5948DE3FEF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7759739D-E722-4893-BF17-5948DE3FEF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7759739D-E722-4893-BF17-5948DE3FEF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A5EB14-EE07-4CC5-A2E2-47F4DFC191E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A5EB14-EE07-4CC5-A2E2-47F4DFC191E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A5EB14-EE07-4CC5-A2E2-47F4DFC191E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A5EB14-EE07-4CC5-A2E2-47F4DFC191E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
