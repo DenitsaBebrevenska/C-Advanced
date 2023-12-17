@@ -1,6 +1,4 @@
-﻿using System.Threading.Channels;
-
-namespace TrafficJam
+﻿namespace TrafficJam
 {
 	internal class Program
 	{
