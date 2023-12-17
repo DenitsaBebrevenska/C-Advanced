@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrafficJam", "TrafficJam\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicStackOperations", "BasicStackOperations\BasicStackOperations.csproj", "{096A0D82-20E4-4B06-8106-A576A3BA964E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicQueueOperations", "BasicQueueOperations\BasicQueueOperations.csproj", "{977B9912-823C-4897-8ECF-71B42E76DDEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{096A0D82-20E4-4B06-8106-A576A3BA964E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{096A0D82-20E4-4B06-8106-A576A3BA964E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{096A0D82-20E4-4B06-8106-A576A3BA964E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
