@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicStackOperations", "Bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicQueueOperations", "BasicQueueOperations\BasicQueueOperations.csproj", "{977B9912-823C-4897-8ECF-71B42E76DDEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumAndMinimumElement", "MaximumAndMinimumElement\MaximumAndMinimumElement.csproj", "{71AF25EE-FC9F-441C-B641-388F2F15E3B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{977B9912-823C-4897-8ECF-71B42E76DDEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71AF25EE-FC9F-441C-B641-388F2F15E3B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71AF25EE-FC9F-441C-B641-388F2F15E3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71AF25EE-FC9F-441C-B641-388F2F15E3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71AF25EE-FC9F-441C-B641-388F2F15E3B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
