@@ -3,7 +3,8 @@
 	internal class Program
 	{
 		static void Main()
-		{
+		{	
+			//Likely that had to be solved using queue or stack but I couldn`t figure as efficient solution using one instead of using a list
 			//The lorry will move one kilometer for each liter of petrol.
 			int petrolPumpCount = int.Parse(Console.ReadLine());
 			List<Pump> pumpList = PopulatePumpList(petrolPumpCount);
@@ -50,22 +51,5 @@
 			}
 			return pumpList;
 		}
-	}
-
-	internal class Pump
-	{
-		public int PumpID { get; set; }
-
-		public int Fuel { get; set; }
-
-		public int DistanceToNextPump { get; set; }
-
-		public Pump(int id, int fuel, int distance)
-		{
-			PumpID = id;
-			Fuel = fuel;
-			DistanceToNextPump = distance;
-		}
-
 	}
 }
