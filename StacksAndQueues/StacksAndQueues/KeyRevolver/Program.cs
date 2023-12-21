@@ -10,6 +10,7 @@
             Queue<int> locks = new Queue<int>(Console.ReadLine().Split().Select(int.Parse));
             int valueOfIntelligence = int.Parse(Console.ReadLine());
             int totalBullets = bullets.Count;
+            int bulletsUsed = 0;
 
             while (locks.Count > 0 && bullets.Count > 0)
             {
@@ -18,6 +19,7 @@
                 while (bullets.Count > 0)
                 {
                     int currentBullet = bullets.Pop();
+                    bulletsUsed++;
                     bool targetShot = false;
 
                     if (currentBullet <= currentLock)
@@ -31,9 +33,9 @@
                         Console.WriteLine("Ping!");
                     }
 
-                    if (bullets.Count % barrelSize == 0 && bullets.Count > 0)
+                    if (bulletsUsed % barrelSize == 0 && bullets.Count > 0)
                     {
-                        Console.WriteLine("Reloading!");
+                        Console.WriteLine("Reloading!"); 
                     }
 
                     if (targetShot)
@@ -51,7 +53,7 @@
             }
             else
             {
-                Console.WriteLine($"{bullets.Count} bullets left. Earned ${valueOfIntelligence - (totalBullets - bullets.Count) * bulletPrice}");
+                Console.WriteLine($"{bullets.Count} bullets left. Earned ${valueOfIntelligence - bulletsUsed * bulletPrice}");
             }  
         }
     }
