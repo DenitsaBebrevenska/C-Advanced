@@ -11,19 +11,19 @@
             int valueOfIntelligence = int.Parse(Console.ReadLine());
             int totalBullets = bullets.Count;
 
-            while (locks.Count > 0)
+            while (locks.Count > 0 && bullets.Count > 0)
             {
                 int currentLock = locks.Peek();
 
-                while (bullets.Count > 0)
+                while (true)
                 {
-                    bool targetShot = false;
                     int currentBullet = bullets.Pop();
+                    bool targetShot = false;
 
                     if (currentBullet <= currentLock)
                     {
-                        Console.WriteLine("Bang!");
                         locks.Dequeue();
+                        Console.WriteLine("Bang!");
                         targetShot = true;
                     }
                     else
@@ -36,20 +36,23 @@
                         Console.WriteLine("Reloading!");
                     }
 
-                    if (targetShot)
+                    if (targetShot || bullets.Count == 0)
                     {
                         break;
                     }
-                }
 
-                if (bullets.Count == 0 && locks.Count > 0)
-                {
-                    Console.WriteLine($"Couldn't get through. Locks left: {locks.Count}");
-                    return;
                 }
                 
             }
-            Console.WriteLine($"{bullets.Count} bullets left. Earned ${valueOfIntelligence - (totalBullets - bullets.Count) * bulletPrice}");
+
+            if (locks.Count > 0 && bullets.Count == 0)
+            {
+                Console.WriteLine($"Couldn't get through. Locks left: {locks.Count}");
+            }
+            else
+            {
+                Console.WriteLine($"{bullets.Count} bullets left. Earned ${valueOfIntelligence - (totalBullets - bullets.Count) * bulletPrice}");
+            }  
         }
     }
 }
