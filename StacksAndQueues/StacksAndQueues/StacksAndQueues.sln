@@ -35,11 +35,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruckTour", "TruckTour\Truc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalancedParenthesis", "BalancedParenthesis\BalancedParenthesis.csproj", "{AC2AB910-48CF-4257-95BC-EE3F48DF50AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTextEditor", "SimpleTextEditor\SimpleTextEditor.csproj", "{DE05710F-ADAB-4665-A568-A57CE13B6DE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTextEditor", "SimpleTextEditor\SimpleTextEditor.csproj", "{DE05710F-ADAB-4665-A568-A57CE13B6DE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crossroads", "Crossroads\Crossroads.csproj", "{F78D6825-88F9-41AE-818B-EBE11E69FC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crossroads", "Crossroads\Crossroads.csproj", "{F78D6825-88F9-41AE-818B-EBE11E69FC3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyRevolver", "KeyRevolver\KeyRevolver.csproj", "{A5A833EF-2124-4446-85EC-A23340B567B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeyRevolver", "KeyRevolver\KeyRevolver.csproj", "{A5A833EF-2124-4446-85EC-A23340B567B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CupsAndBottles", "CupsAndBottles\CupsAndBottles.csproj", "{7BB21FDC-3AEF-419A-A7CE-88243272F3EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{A5A833EF-2124-4446-85EC-A23340B567B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5A833EF-2124-4446-85EC-A23340B567B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5A833EF-2124-4446-85EC-A23340B567B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB21FDC-3AEF-419A-A7CE-88243272F3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB21FDC-3AEF-419A-A7CE-88243272F3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB21FDC-3AEF-419A-A7CE-88243272F3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB21FDC-3AEF-419A-A7CE-88243272F3EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

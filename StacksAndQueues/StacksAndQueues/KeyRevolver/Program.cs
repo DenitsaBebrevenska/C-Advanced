@@ -15,7 +15,7 @@
             {
                 int currentLock = locks.Peek();
 
-                while (true)
+                while (bullets.Count > 0)
                 {
                     int currentBullet = bullets.Pop();
                     bool targetShot = false;
@@ -36,7 +36,7 @@
                         Console.WriteLine("Reloading!");
                     }
 
-                    if (targetShot || bullets.Count == 0)
+                    if (targetShot)
                     {
                         break;
                     }
