@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumMatrixColumns", "SumMatr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimaryDiagonal", "PrimaryDiagonal\PrimaryDiagonal.csproj", "{51ED031B-15DE-4006-B060-1183C17C0DD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolInMatrix", "SymbolInMatrix\SymbolInMatrix.csproj", "{5F4B75D0-3897-45CD-9236-2749FA156280}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{51ED031B-15DE-4006-B060-1183C17C0DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51ED031B-15DE-4006-B060-1183C17C0DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51ED031B-15DE-4006-B060-1183C17C0DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4B75D0-3897-45CD-9236-2749FA156280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4B75D0-3897-45CD-9236-2749FA156280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4B75D0-3897-45CD-9236-2749FA156280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4B75D0-3897-45CD-9236-2749FA156280}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
