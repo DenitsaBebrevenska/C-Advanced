@@ -5,27 +5,11 @@
         static void Main()
         {
             char[,] bunnyLair = SpawnBunnyLair();
-            int playerRowLocation = -1;
-            int playerColLocation = -1;
-
-            for (int i = 0; i < bunnyLair.GetLength(0); i++)
-            {
-                string currentRow = Console.ReadLine();
-
-                for (int j = 0; j < bunnyLair.GetLength(1); j++)
-                {
-                    bunnyLair[i, j] = currentRow[j];
-
-                    if (currentRow[j] == 'P')
-                    {
-                        playerRowLocation = i;
-                        playerColLocation = j;
-                    }
-                }
-            }
-
+            PopulateBunnyLair(bunnyLair);
+            int playerRowLocation = GetPlayerStartingPosition(bunnyLair)[0];
+            int playerColLocation = GetPlayerStartingPosition(bunnyLair)[1];
             List<char> movementList = Console.ReadLine().ToCharArray().ToList();
-            int[] lastPosition = new int[] { playerRowLocation, playerColLocation };
+            int[] latestPositionPlayer = new int[] { playerRowLocation, playerColLocation };
 
             for (int i = 0; i < movementList.Count; i++)
             {
@@ -47,32 +31,31 @@
 
                 if (ExitsTheLair(playerRowLocation, playerColLocation, bunnyLair))
                 {
-                    bunnyLair[lastPosition[0], lastPosition[1]] = '.';
+                    VacatePlayerPreviousSpot(bunnyLair, latestPositionPlayer);
                     MultiplyBunnies(bunnyLair);
                     PrintLairFinalState(bunnyLair);
-                    Console.WriteLine($"won: {lastPosition[0]} {lastPosition[1]}");
+                    Console.WriteLine($"won: {latestPositionPlayer[0]} {latestPositionPlayer[1]}");
                     break;
                 }
 
                 if (KilledByBunny(playerRowLocation, playerColLocation, bunnyLair))
                 {
-                    bunnyLair[lastPosition[0], lastPosition[1]] = '.';
+                    VacatePlayerPreviousSpot(bunnyLair, latestPositionPlayer);
                     MultiplyBunnies(bunnyLair);
                     PrintLairFinalState(bunnyLair);
                     Console.WriteLine($"dead: {playerRowLocation} {playerColLocation}");
                     break;
                 }
 
-                bunnyLair[lastPosition[0], lastPosition[1]] = '.';
-                lastPosition[0] = playerRowLocation;
-                lastPosition[1] = playerColLocation;
+                VacatePlayerPreviousSpot(bunnyLair, latestPositionPlayer);
+                UpdatePlayerLatestPosition(latestPositionPlayer, playerRowLocation, playerColLocation);
 
                 MultiplyBunnies(bunnyLair);
 
-                if (KilledByBunny(lastPosition[0], lastPosition[1], bunnyLair))
+                if (KilledByBunny(latestPositionPlayer[0], latestPositionPlayer[1], bunnyLair))
                 {
                     PrintLairFinalState(bunnyLair);
-                    Console.WriteLine($"dead: {lastPosition[0]} {lastPosition[1]}");
+                    Console.WriteLine($"dead: {latestPositionPlayer[0]} {latestPositionPlayer[1]}");
                     break;
                 }
             }
@@ -91,6 +74,17 @@
             }
         }
 
+        static void VacatePlayerPreviousSpot(char[,] bunnyLair, int[] lastPosition)
+        {
+            bunnyLair[lastPosition[0], lastPosition[1]] = '.';
+        }
+
+        static void UpdatePlayerLatestPosition(int[] lastPosition, int playerRowLocation, int playerColLocation)
+        {
+            lastPosition[0] = playerRowLocation;
+            lastPosition[1] = playerColLocation;
+        }
+
         static char[,] SpawnBunnyLair()
         {
             int[] matrixDetails = Console.ReadLine().Split().Select(int.Parse).ToArray();
@@ -98,6 +92,38 @@
             int cols = matrixDetails[1];
             char[,] bunnyLair = new char[rows, cols];
             return bunnyLair;
+        }
+
+        static int[] GetPlayerStartingPosition(char[,] bunnyLair)
+        {
+            int[] playerCoordinates = new int[]{-1, -1};
+
+            for (int i = 0; i < bunnyLair.GetLength(0); i++)
+            {
+                for (int j = 0; j < bunnyLair.GetLength(1); j++)
+                {
+                    if (bunnyLair[i, j] == 'P')
+                    {
+                        playerCoordinates[0] = i;
+                        playerCoordinates[1] = j;
+                        return playerCoordinates;
+                    }
+                }
+            }
+            return playerCoordinates;
+        }
+
+        static void PopulateBunnyLair(char[,] bunnyLair)
+        {
+            for (int i = 0; i < bunnyLair.GetLength(0); i++)
+            {
+                string currentRow = Console.ReadLine();
+
+                for (int j = 0; j < bunnyLair.GetLength(1); j++)
+                {
+                    bunnyLair[i, j] = currentRow[j];
+                }
+            }
         }
 
         static void MultiplyBunnies(char[,] bunnyLair)
