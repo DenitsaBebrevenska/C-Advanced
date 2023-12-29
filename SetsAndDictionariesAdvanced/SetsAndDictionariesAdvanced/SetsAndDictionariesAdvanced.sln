@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountSameValuesInArray", "CountSameValuesInArray\CountSameValuesInArray.csproj", "{E453DADE-A88F-4237-8D76-A7D36248E0B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountSameValuesInArray", "CountSameValuesInArray\CountSameValuesInArray.csproj", "{E453DADE-A88F-4237-8D76-A7D36248E0B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AverageStudentGrades", "AverageStudentGrades\AverageStudentGrades.csproj", "{94FF8873-ABB0-4ADE-868E-042947CFB5B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AverageStudentGrades", "AverageStudentGrades\AverageStudentGrades.csproj", "{94FF8873-ABB0-4ADE-868E-042947CFB5B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Largest3Numbers", "Largest3Numbers\Largest3Numbers.csproj", "{390A12AA-D8C1-411E-824A-C78B74AB4287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{94FF8873-ABB0-4ADE-868E-042947CFB5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94FF8873-ABB0-4ADE-868E-042947CFB5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94FF8873-ABB0-4ADE-868E-042947CFB5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390A12AA-D8C1-411E-824A-C78B74AB4287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390A12AA-D8C1-411E-824A-C78B74AB4287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390A12AA-D8C1-411E-824A-C78B74AB4287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390A12AA-D8C1-411E-824A-C78B74AB4287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
