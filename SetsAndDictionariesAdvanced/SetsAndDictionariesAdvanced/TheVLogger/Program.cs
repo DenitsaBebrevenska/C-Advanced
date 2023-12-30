@@ -85,11 +85,11 @@
 
         public int FollowingCount { get; set; }
 
-        public HashSet<string> Followers { get; set; }
+        public List<string> Followers { get; set; }
 
         public Vlogger()
         {
-            Followers = new HashSet<string>();
+            Followers = new List<string>();
         }
 
         public override string ToString()
