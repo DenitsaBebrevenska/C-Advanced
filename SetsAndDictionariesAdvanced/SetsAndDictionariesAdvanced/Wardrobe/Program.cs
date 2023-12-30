@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            Dictionary<string, Dictionary<string, int>> wardrobe = 
+            Dictionary<string, Dictionary<string, int>> wardrobe =
                 new Dictionary<string, Dictionary<string, int>>();
             byte entryCount = byte.Parse(Console.ReadLine());
 
@@ -47,13 +47,10 @@
 
                 foreach (var kvp2 in kvp.Value)
                 {
-                    if (kvp.Key == itemColor)
+                    if (kvp.Key == itemColor && kvp2.Key == pieceOfClothing)
                     {
-                        if (kvp2.Key == pieceOfClothing)
-                        {
-                            Console.WriteLine($"* {kvp2.Key} - {kvp2.Value} (found!)");
-                            continue;
-                        }
+                        Console.WriteLine($"* {kvp2.Key} - {kvp2.Value} (found!)");
+                        continue;
                     }
 
                     Console.WriteLine($"* {kvp2.Key} - {kvp2.Value}");
