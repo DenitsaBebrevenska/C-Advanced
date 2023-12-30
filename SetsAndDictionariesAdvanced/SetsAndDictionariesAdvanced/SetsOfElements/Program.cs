@@ -22,13 +22,8 @@
                 secondSet.Add(int.Parse(Console.ReadLine()));
             }
 
-            foreach (int number in firstSet)
-            {
-                if (secondSet.Contains(number))
-                {
-                    Console.Write(number + " ");
-                }
-            }
+            firstSet.IntersectWith(secondSet);
+            Console.WriteLine(string.Join(" ", firstSet));
 
         }
     }
