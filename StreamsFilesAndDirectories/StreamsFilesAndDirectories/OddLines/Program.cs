@@ -14,7 +14,21 @@
         {
             using (StreamReader reader = new StreamReader(inputFilePath))
             {
-                //TODO
+                using (StreamWriter writer = new StreamWriter(outputFilePath))
+                {
+                    int counter = 0;
+
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        counter++;
+
+                        if (counter % 2 != 0)
+                        {
+                            writer.WriteLine(line);
+                        }
+                    }
+                }
             }
         }
     }
