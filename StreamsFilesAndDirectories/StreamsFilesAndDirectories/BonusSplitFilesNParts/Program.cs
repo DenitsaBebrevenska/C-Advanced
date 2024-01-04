@@ -1,52 +1,66 @@
-﻿namespace BonusSplitFilesNParts
+﻿using System.IO;
+
+namespace BonusSplitFilesNParts
 {
     internal class Program
     {
+        static readonly string PathInput = "../../../input.txt";
         static void Main()
         {
-            string directory = "../../../input.txt";
+            
             Console.WriteLine("How many parts do you want to split the input.txt file into?");
-            string input = Console.ReadLine();
+            byte[] fileBytes = File.ReadAllBytes(PathInput);
+            int partsCount = GetCorrectCountFromUser(fileBytes.Length);
+            SplitFileIntoNParts(fileBytes, partsCount);
+        }
 
-            byte[] fileBytes = File.ReadAllBytes(directory);
-
-            while (!CheckUserInput(input, fileBytes.Length))
+        static void SplitFileIntoNParts(byte[] fileBytes, int partsCount)
+        {
+            int parts = fileBytes.Length / partsCount;
+            using (FileStream fileOpen = new FileStream(PathInput, FileMode.Open))
             {
-                input = Console.ReadLine();
+                int offset = 0;
+
+                for (int i = 1; i <= partsCount; i++)
+                {
+                    fileOpen.Read(fileBytes, offset, parts);
+
+                    using (FileStream fileCreate = new FileStream($"../../../output{i}.txt", FileMode.Create))
+                    {
+                        fileCreate.Write(fileBytes, offset, parts);
+                    }
+
+                    offset += parts;
+                }
             }
         }
 
-        static bool CheckUserInput(string input, long fileLength)
+        static int GetCorrectCountFromUser(long fileLength)
         {
-            long partsCount;
-
-            try
+            while (true)
             {
-                partsCount = long.Parse(input);
-            }
-            catch (Exception parsingException)
-            {
-                Console.WriteLine("Please enter a number!");
-                return false;
-            }
-            if (partsCount < 0)
-            {
-                Console.WriteLine("The parts count cannot be a negative number! Enter a new count!");
-                return false;
-            }
+                string input = Console.ReadLine();
 
-            if (partsCount > fileLength)
-            {
-                Console.WriteLine("Cannot split file into more parts than its length! Enter a new count!");
-                return false;
+                if (int.TryParse(input, out int result))
+                {
+                    if (result < 0)
+                    {
+                        Console.WriteLine("The parts count cannot be a negative number! Enter a new count!");
+                        continue;
+                    }
+
+                    if (result > fileLength)
+                    {
+                        Console.WriteLine("Cannot split file into more parts than its length! Enter a new count!");
+                        continue;
+                    }
+
+                    return result;
+                }
+
+                Console.WriteLine("Invalid input! Please enter a number!");
+
             }
-
-            return true;
-        }
-
-        static void ParseInput()
-        {
-
         }
     }
 }
