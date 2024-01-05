@@ -19,7 +19,7 @@
             {
                 using (FileStream fileCreate = new FileStream(outputFilePath, FileMode.Create))
                 {
-                    byte[] buffer = new byte[4024]; //I am not happy with you!
+                    byte[] buffer = new byte[4096]; //A buffer size most often used according to StackOverflow
 
                     while (true)
                     {
