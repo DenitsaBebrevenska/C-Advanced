@@ -22,16 +22,16 @@ namespace DirectoryTraversal
             DirectoryInfo directoryInfo = new DirectoryInfo(inputFolderPath);
             FileInfo[] files = directoryInfo.GetFiles();
 
-            Dictionary<string, List<FileDirectory>> fileDictionary = new Dictionary<string, List<FileDirectory>>();
+            Dictionary<string, List<FileInfo>> fileDictionary = new Dictionary<string, List<FileInfo>>();
 
             foreach (FileInfo file in files)
             {
                 if (!fileDictionary.ContainsKey(file.Extension))
                 {
-                    fileDictionary.Add(file.Extension, new List<FileDirectory>());
+                    fileDictionary.Add(file.Extension, new List<FileInfo>());
                 }
 
-                fileDictionary[file.Extension].Add(new FileDirectory(file.Name, file.Length));
+                fileDictionary[file.Extension].Add(file);
             }
 
             StringBuilder reportBuilder = new();
@@ -39,15 +39,15 @@ namespace DirectoryTraversal
             return reportBuilder.ToString();
         }
 
-        public static void CreateReport(Dictionary<string, List<FileDirectory>> fileDictionary, StringBuilder reportBuilder)
+        public static void CreateReport(Dictionary<string, List<FileInfo>> fileDictionary, StringBuilder reportBuilder)
         {
             foreach (var kvp in fileDictionary.OrderByDescending(e => e.Value.Count).ThenBy(e => e.Key))
             {
                 reportBuilder.AppendLine(kvp.Key);
 
-                foreach (FileDirectory file in kvp.Value.OrderBy(f => f.SizeKb))
+                foreach (FileInfo file in kvp.Value.OrderBy(f => f.Length))
                 {
-                    reportBuilder.AppendLine($"--{file.Name} - {file.SizeKb}kb");
+                    reportBuilder.AppendLine($"--{file.Name} - {(double)file.Length / 1024}kb");
                 }
             }
         }
@@ -55,20 +55,7 @@ namespace DirectoryTraversal
         public static void WriteReportToDesktop(string textContent, string reportFileName)
         {
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + reportFileName;
-            File.WriteAllText(desktopPath, textContent);
-        }
-    }
-
-    public class FileDirectory
-    {
-        public string Name { get; set; }
-
-        public float SizeKb { get; set; }
-
-        public FileDirectory(string name, long sizeBytes)
-        {
-            Name = name;
-            SizeKb = (float)sizeBytes / 1024;
+            File.WriteAllText(Path.Combine(desktopPath, reportFileName), textContent);
         }
     }
 }
