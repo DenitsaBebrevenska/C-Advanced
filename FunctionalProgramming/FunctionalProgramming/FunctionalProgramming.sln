@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsOfHonor", "KnightsOf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMinFunction", "CustomMinFunction\CustomMinFunction.csproj", "{1EAE3FA2-8312-4CF4-92BC-5D4D0B795910}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEvensOrOdds", "FindEvensOrOdds\FindEvensOrOdds.csproj", "{1CB15F35-391B-4D9C-B618-94BF1AE99029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{1EAE3FA2-8312-4CF4-92BC-5D4D0B795910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EAE3FA2-8312-4CF4-92BC-5D4D0B795910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EAE3FA2-8312-4CF4-92BC-5D4D0B795910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
