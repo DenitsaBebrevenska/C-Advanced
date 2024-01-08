@@ -24,7 +24,6 @@
                     Console.Write(i + " ");
                 }
             }
-            
         }
     }
 }

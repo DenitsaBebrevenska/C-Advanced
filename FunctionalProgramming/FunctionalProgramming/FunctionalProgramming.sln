@@ -5,21 +5,23 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortEvenNumbers", "SortEvenNumbers\SortEvenNumbers.csproj", "{14C38256-1F08-441A-A9AF-DC8AB840C91F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumNumbers", "SumNumbers\SumNumbers.csproj", "{1EEF16F0-851B-4BF7-AC6D-7BDD10E2038B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumNumbers", "SumNumbers\SumNumbers.csproj", "{1EEF16F0-851B-4BF7-AC6D-7BDD10E2038B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountUppercaseWords", "CountUppercaseWords\CountUppercaseWords.csproj", "{01F859CF-EADA-4DEE-811C-C07FEFDD6610}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountUppercaseWords", "CountUppercaseWords\CountUppercaseWords.csproj", "{01F859CF-EADA-4DEE-811C-C07FEFDD6610}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddVAT", "AddVAT\AddVAT.csproj", "{30C3D32F-7464-4718-8389-128B535F87BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddVAT", "AddVAT\AddVAT.csproj", "{30C3D32F-7464-4718-8389-128B535F87BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilterByAge", "FilterByAge\FilterByAge.csproj", "{7DCB750B-7B18-49C8-AFDC-1B44225D9BBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilterByAge", "FilterByAge\FilterByAge.csproj", "{7DCB750B-7B18-49C8-AFDC-1B44225D9BBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionPrint", "ActionPrint\ActionPrint.csproj", "{33847BCC-2306-4E61-80E2-EE8AA2744DD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActionPrint", "ActionPrint\ActionPrint.csproj", "{33847BCC-2306-4E61-80E2-EE8AA2744DD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnightsOfHonor", "KnightsOfHonor\KnightsOfHonor.csproj", "{1723966F-3B9A-4BD7-8E37-0A4F04FA6174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KnightsOfHonor", "KnightsOfHonor\KnightsOfHonor.csproj", "{1723966F-3B9A-4BD7-8E37-0A4F04FA6174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMinFunction", "CustomMinFunction\CustomMinFunction.csproj", "{1EAE3FA2-8312-4CF4-92BC-5D4D0B795910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomMinFunction", "CustomMinFunction\CustomMinFunction.csproj", "{1EAE3FA2-8312-4CF4-92BC-5D4D0B795910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindEvensOrOdds", "FindEvensOrOdds\FindEvensOrOdds.csproj", "{1CB15F35-391B-4D9C-B618-94BF1AE99029}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindEvensOrOdds", "FindEvensOrOdds\FindEvensOrOdds.csproj", "{1CB15F35-391B-4D9C-B618-94BF1AE99029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppliedArithmetics", "AppliedArithmetics\AppliedArithmetics.csproj", "{B25CF258-FA4B-49DA-A7F2-B9C402DC8E09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CB15F35-391B-4D9C-B618-94BF1AE99029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B25CF258-FA4B-49DA-A7F2-B9C402DC8E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B25CF258-FA4B-49DA-A7F2-B9C402DC8E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B25CF258-FA4B-49DA-A7F2-B9C402DC8E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B25CF258-FA4B-49DA-A7F2-B9C402DC8E09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
