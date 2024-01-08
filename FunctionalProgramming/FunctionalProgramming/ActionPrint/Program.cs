@@ -12,6 +12,12 @@
 
             Action<string> print = word => Console.WriteLine(word);
             words.ForEach(print);
+
+            //or
+            //Action<List<string>> print = words =>
+            //Console.WriteLine(string.Join(Environment.NewLine, words));
+            //print(words);
+
         }
     }
 }
